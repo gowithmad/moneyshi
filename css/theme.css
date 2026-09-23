@@ -1,0 +1,28 @@
+/* MoneyShi · theme.css — colours for light and dark mode. Change the look here. */
+
+:root{
+  --paper:#F2F5F0;--card:#FFFFFF;--ink:#1A2521;--muted:#5D6C65;--line:#DCE3DD;--soft:#EAF0EB;
+  --living:#3F4FB0;--commit:#C4850C;--people:#178579;--in:#1D7852;--neg:#B3402F;
+  --h1:#D9DCEF;--h2:#B2B9DF;--h3:#8892CE;
+  --out:#C0503A;--refund:#7A8B83;--c1:#3F4FB0;--c2:#178579;--c3:#C4850C;--c4:#B5457A;--c5:#6A8F2B;--c6:#D0602A;--c7:#4C7FB8;--c8:#8A5FBF;--c9:#8A9690;
+  --on-ink:#F2F5F0;--coral:#FFB4A6;
+  --font-d:'Avenir Next','Segoe UI Variable Display','Segoe UI',system-ui,-apple-system,sans-serif;
+  --font-b:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1512;--card:#161F1A;--ink:#E8F0EB;--muted:#94A59C;--line:#26312B;--soft:#1D2822;
+    --living:#9AA8FF;--commit:#F0B948;--people:#4CC2B2;--in:#4CC38A;--neg:#FF9C8B;
+    --h1:#303A48;--h2:#4B5676;--h3:#687498;
+    --out:#FF9C8B;--refund:#7F9187;--c1:#9AA8FF;--c2:#4CC2B2;--c3:#F0B948;--c4:#F08DB8;--c5:#A7CF5C;--c6:#F59A6B;--c7:#8FBAE8;--c8:#C0A0F0;--c9:#8DA097;
+    --on-ink:#0E1512;--coral:#B33F2E;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0E1512;--card:#161F1A;--ink:#E8F0EB;--muted:#94A59C;--line:#26312B;--soft:#1D2822;
+  --living:#9AA8FF;--commit:#F0B948;--people:#4CC2B2;--in:#4CC38A;--neg:#FF9C8B;
+  --h1:#303A48;--h2:#4B5676;--h3:#687498;
+    --out:#FF9C8B;--refund:#7F9187;--c1:#9AA8FF;--c2:#4CC2B2;--c3:#F0B948;--c4:#F08DB8;--c5:#A7CF5C;--c6:#F59A6B;--c7:#8FBAE8;--c8:#C0A0F0;--c9:#8DA097;
+  --on-ink:#0E1512;--coral:#B33F2E;
+}

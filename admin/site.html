@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Site settings · MoneyShi admin</title>
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../icons/icon-192.png">
+<link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/app.css"><link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin">
+<main class="wrap narrow">
+  <h1 class="h1s">Site settings</h1>
+  <div class="card panel">
+    <h3>Brand</h3>
+    <div class="row2"><label>App name<input id="s-name"></label><label>Tagline<input id="s-tag"></label></div>
+    <label>Accent colour<input id="s-accent" type="color" style="height:44px;padding:4px"></label>
+  </div>
+  <div class="card panel">
+    <h3>Where data is stored</h3>
+    <label>Backend<select id="s-backend"><option value="local">Local: each device keeps its own data</option><option value="supabase">Online: Supabase database (syncs across devices)</option></select></label>
+    <label>Supabase project URL<input id="s-sburl" placeholder="https://xxxx.supabase.co" autocapitalize="none" spellcheck="false"></label>
+    <label>Supabase anon (public) key<input id="s-sbkey" placeholder="eyJ…" autocapitalize="none" spellcheck="false"></label>
+    <p class="note" style="margin:8px 0 0">The anon key is meant to be public because row-level security in the database protects each user’s rows. Never paste the service_role key here.</p>
+  </div>
+  <div class="card panel">
+    <h3>Features</h3>
+    <label class="chk"><input type="checkbox" id="f-charts"><span>Charts page</span></label>
+    <label class="chk"><input type="checkbox" id="f-budgets"><span>Budgets page</span></label>
+    <label class="chk"><input type="checkbox" id="f-io"><span>Import and export</span></label>
+    <label>Accounts every new user starts with (one per line, <code>key|Label</code>)<textarea id="s-accs" rows="3" style="min-height:80px"></textarea></label>
+  </div>
+  <div class="card panel">
+    <h3>Repository</h3>
+    <div class="row2"><label>Owner<input id="s-o" autocapitalize="none" spellcheck="false"></label><label>Repository<input id="s-r" autocapitalize="none" spellcheck="false"></label></div>
+    <label>Branch<input id="s-b" autocapitalize="none" spellcheck="false"></label>
+  </div>
+  <div id="gh-slot"></div>
+  <div class="card panel">
+    <h3>Save</h3>
+    <label>Commit message (optional)<input id="s-msg" placeholder="Update site settings from the admin page"></label>
+    <div class="btnrow"><button class="primary" id="save-gh" type="button">Save to GitHub</button><button class="btn" id="dl" type="button">Download the file</button><button class="btn" id="cp" type="button">Copy</button></div>
+    <p class="err" id="save-msg" role="status"></p>
+    <details><summary>Preview of config/app.config.js</summary><pre class="out" id="preview"></pre></details>
+  </div>
+</main>
+<script src="../config/app.config.js"></script>
+<script src="../js/core/util.js"></script>
+<script src="../js/core/crypto.js"></script>
+<script src="../js/core/supabase.js"></script>
+<script src="../js/data/local-db.js"></script>
+<script src="../js/data/cloud-db.js"></script>
+<script src="../js/data/db.js"></script>
+<script src="../js/auth/local-auth.js"></script>
+<script src="../js/auth/cloud-auth.js"></script>
+<script src="../js/auth/auth.js"></script>
+<script src="../js/admin/github.js"></script>
+<script src="../js/admin/admin-common.js"></script>
+<script src="../js/admin/site.js"></script>
+</body>
+</html>

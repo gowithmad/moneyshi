@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Overview · MoneyShi</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1D7852">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="dashboard">
+<main class="wrap">
+<div class="banner" id="banner" hidden></div>
+<div class="hero">
+      <h1 id="headline">Loading…</h1>
+      <p class="meta" id="plabel"></p>
+    </div>
+    <div class="bwarn" id="budwarn" hidden></div>
+    <div class="eq" id="eq"></div>
+    <p class="note" id="savenote"></p>
+    <div class="two" style="margin-top:22px">
+      <div class="card">
+        <div class="sec-h"><h2>Where the money went</h2><p>Tap a row for the details</p></div>
+        <ul class="plain" id="cats"></ul>
+      </div>
+      <div class="stack">
+        <div class="card"><div class="sec-h" style="margin-bottom:4px"><h2>Biggest payments</h2></div><div id="big"></div></div>
+        <div class="card"><div class="sec-h" style="margin-bottom:4px"><h2>Accounts</h2></div><div id="acc"></div></div>
+      </div>
+    </div>
+</main>
+<script src="config/app.config.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/crypto.js"></script>
+<script src="js/core/supabase.js"></script>
+<script src="js/data/local-db.js"></script>
+<script src="js/data/cloud-db.js"></script>
+<script src="js/data/db.js"></script>
+<script src="js/auth/local-auth.js"></script>
+<script src="js/auth/cloud-auth.js"></script>
+<script src="js/auth/auth.js"></script>
+<script src="js/app/categories.js"></script>
+<script src="js/app/state.js"></script>
+<script src="js/app/calc.js"></script>
+<script src="js/app/templates.js"></script>
+<script src="js/app/layout.js"></script>
+<script src="js/app/entry-form.js"></script>
+<script src="js/app/detail.js"></script>
+<script src="js/app/backup.js"></script>
+<script src="js/app/boot.js"></script>
+<script src="js/core/pwa.js"></script>
+<script src="js/pages/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Overview · MoneyShi admin</title>
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../icons/icon-192.png">
+<link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/app.css"><link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin">
+<main class="wrap narrow">
+  <h1 class="h1s">Admin overview</h1>
+  <div id="status"></div>
+  <div class="card panel"><h3>Set-up checklist</h3><div id="checklist"></div></div>
+  <div class="card panel"><h3>Online database</h3><p class="note" style="margin:0">Checks that this site can reach your Supabase project.</p><div class="btnrow"><button class="btn" id="db-test" type="button">Test database connection</button></div><p class="note" id="db-out" role="status"></p></div>
+  <div id="gh-slot"></div>
+  <div class="card panel"><h3>What you can do here</h3><p class="note" style="margin:0"><b>Site settings</b> changes the name, colours, features and the database link. <b>Pages &amp; files</b> lets you edit any page, style or script, add new files or delete files. <b>Users</b> shows accounts and who is an administrator. Every change is saved as a commit in your GitHub repository, so you can undo it there.</p></div>
+</main>
+<script src="../config/app.config.js"></script>
+<script src="../js/core/util.js"></script>
+<script src="../js/core/crypto.js"></script>
+<script src="../js/core/supabase.js"></script>
+<script src="../js/data/local-db.js"></script>
+<script src="../js/data/cloud-db.js"></script>
+<script src="../js/data/db.js"></script>
+<script src="../js/auth/local-auth.js"></script>
+<script src="../js/auth/cloud-auth.js"></script>
+<script src="../js/auth/auth.js"></script>
+<script src="../js/admin/github.js"></script>
+<script src="../js/admin/admin-common.js"></script>
+<script src="../js/admin/overview.js"></script>
+</body>
+</html>

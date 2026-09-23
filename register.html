@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Create account · MoneyShi</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1D7852">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/app.css"><link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body" data-page="register">
+<div class="auth"><div class="auth-card">
+<div id="brand"></div>
+<h1 class="auth-h">Create your account</h1>
+<form id="reg-form" novalidate>
+  <label><span id="r-label">Username</span><input id="r-id" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false"></label>
+  <label>Your name (optional)<input id="r-name" autocomplete="name" placeholder="Shown inside the app"></label>
+  <label>Password<div class="pw"><input id="r-pw" type="password" autocomplete="new-password" placeholder="At least 6 characters"><button type="button" class="pw-t" data-pw="r-pw">Show</button></div></label>
+  <label>Repeat password<div class="pw"><input id="r-pw2" type="password" autocomplete="new-password"></div></label>
+  <p class="err" id="r-err" role="alert"></p>
+  <button class="primary wide" type="submit">Create account</button>
+  <p class="auth-note">A new account starts completely empty. Its entries stay separate from every other account.</p>
+</form>
+<div id="recovery" hidden>
+  <h1 class="auth-h">Save your recovery code</h1>
+  <p class="auth-note" style="margin-top:8px">This is the only way to reset your password on this device. It is shown once. Write it down or save it somewhere safe.</p>
+  <div class="code-box" id="rc-code"></div>
+  <div class="btnrow"><button class="btn" id="rc-copy" type="button">Copy</button><button class="btn" id="rc-dl" type="button">Download</button></div>
+  <label class="chk" style="margin-top:14px"><input type="checkbox" id="rc-ok"><span>I have saved my recovery code</span></label>
+  <button class="primary wide" id="rc-go" type="button" disabled>Continue</button>
+</div>
+<div id="confirm" class="auth-ok" hidden></div>
+<p class="auth-links" id="reg-links">Already have an account? <a href="login.html">Sign in</a></p>
+</div></div>
+<script src="config/app.config.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/crypto.js"></script>
+<script src="js/core/supabase.js"></script>
+<script src="js/data/local-db.js"></script>
+<script src="js/auth/local-auth.js"></script>
+<script src="js/auth/cloud-auth.js"></script>
+<script src="js/auth/auth.js"></script>
+<script src="js/app/categories.js"></script>
+<script src="js/core/pwa.js"></script>
+<script src="js/pages/auth-common.js"></script>
+<script src="js/pages/register.js"></script>
+</body>
+</html>

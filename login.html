@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sign in · MoneyShi</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1D7852">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/app.css"><link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body" data-page="login">
+<div class="auth"><div class="auth-card">
+<div id="brand"></div>
+<h1 class="auth-h">Sign in</h1>
+<form id="login-form" novalidate>
+  <label><span id="l-label">Username</span><input id="l-id" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false"></label>
+  <label>Password<div class="pw"><input id="l-pw" type="password" autocomplete="current-password"><button type="button" class="pw-t" data-pw="l-pw">Show</button></div></label>
+  <label class="chk"><input type="checkbox" id="l-remember"><span>Keep me signed in on this device</span></label>
+  <p class="err" id="l-err" role="alert"></p>
+  <button class="primary wide" type="submit">Sign in</button>
+</form>
+<p class="auth-links"><a href="forgot-password.html">Forgot your password?</a> · <a href="register.html">Create an account</a></p>
+<p class="auth-note" id="mode-note"></p>
+</div></div>
+<script src="config/app.config.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/crypto.js"></script>
+<script src="js/core/supabase.js"></script>
+<script src="js/data/local-db.js"></script>
+<script src="js/auth/local-auth.js"></script>
+<script src="js/auth/cloud-auth.js"></script>
+<script src="js/auth/auth.js"></script>
+<script src="js/app/categories.js"></script>
+<script src="js/core/pwa.js"></script>
+<script src="js/pages/auth-common.js"></script>
+<script src="js/pages/login.js"></script>
+</body>
+</html>

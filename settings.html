@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Data & backup · MoneyShi</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1D7852">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="settings">
+<main class="wrap narrow">
+  <h1 class="h1s">Data &amp; backup</h1>
+  <div class="card panel"><h3>Where your data lives</h3><p class="note" id="backend-note" style="margin:0"></p></div>
+  <div class="card panel">
+    <h3>Back up and restore</h3>
+    <p class="note" id="storage-note" style="margin:0 0 10px"></p>
+    <div class="btnrow">
+      <button class="btn" id="x-json">Export backup (JSON)</button>
+      <button class="btn" id="x-csv">Export CSV</button>
+      <button class="btn" id="x-import">Import file…</button>
+      <input type="file" id="x-file" accept=".json,.csv,text/csv,application/json" hidden>
+    </div>
+    <p class="note" id="import-msg" role="status"></p>
+    <details><summary>What can I import?</summary>
+<pre>JSON: a backup exported from here.
+CSV: the first row must name the columns.
+  date       2026-10-05 or 05/10/2026
+  name       payee or description
+  amount     a number
+  type       in / out  (or debit / credit)
+  category   optional
+  account    optional
+  note       optional
+Instead of "type" you can use separate "debit" and
+"credit" columns, or negative amounts for money out.
+Rows already here are skipped.</pre></details>
+  </div>
+  <div class="card panel" id="android-sec" hidden>
+    <h3>On this phone</h3>
+    <label class="chk" style="margin-top:0"><input type="checkbox" id="auto-cb"><span>Keep an up-to-date backup file in your Downloads folder after every change</span></label>
+    <p class="note" id="auto-note" style="margin:8px 0 10px"></p>
+    <button class="btn" id="x-share">Share a backup…</button>
+  </div>
+  <div class="card panel">
+    <h3>Categories you added</h3>
+    <div id="custom-cats"></div>
+    <div class="row2" style="align-items:end"><label>Name<input id="nc-name" placeholder="e.g. Rent"></label><label>Type<select id="nc-dir"><option value="out">Money out</option><option value="in">Money in</option></select></label></div>
+    <div class="row2" style="align-items:end"><label>Counts as<select id="nc-grp"></select></label><div><button class="btn" id="nc-add" style="margin-top:12px">Add category</button></div></div>
+  </div>
+  <div class="card panel">
+    <h3>Accounts</h3>
+    <div id="acc-list"></div>
+    <div class="row2" style="align-items:end"><label>New account<input id="na-name" placeholder="e.g. Axis ••1234"></label><div><button class="btn" id="na-add" style="margin-top:12px">Add account</button></div></div>
+  </div>
+  <div class="card panel">
+    <h3>Start over</h3>
+    <p class="note" style="margin:0 0 10px">Removes every entry from your account. Export a backup first.</p>
+    <button class="btn danger" id="x-clear">Delete all entries</button>
+  </div>
+</main>
+<script src="config/app.config.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/crypto.js"></script>
+<script src="js/core/supabase.js"></script>
+<script src="js/data/local-db.js"></script>
+<script src="js/data/cloud-db.js"></script>
+<script src="js/data/db.js"></script>
+<script src="js/auth/local-auth.js"></script>
+<script src="js/auth/cloud-auth.js"></script>
+<script src="js/auth/auth.js"></script>
+<script src="js/app/categories.js"></script>
+<script src="js/app/state.js"></script>
+<script src="js/app/calc.js"></script>
+<script src="js/app/templates.js"></script>
+<script src="js/app/layout.js"></script>
+<script src="js/app/entry-form.js"></script>
+<script src="js/app/detail.js"></script>
+<script src="js/app/backup.js"></script>
+<script src="js/app/boot.js"></script>
+<script src="js/core/pwa.js"></script>
+<script src="js/pages/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pages & files · MoneyShi admin</title>
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../icons/icon-192.png">
+<link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/app.css"><link rel="stylesheet" href="../css/admin.css">
+</head>
+<body data-page="admin">
+<main class="wrap" style="max-width:1080px">
+  <h1 class="h1s" style="margin-bottom:12px">Pages &amp; files</h1>
+  <div id="gh-slot" style="margin-bottom:16px"></div>
+  <div id="files-ui" hidden>
+    <div class="split">
+      <div class="card panel">
+        <input id="f-filter" placeholder="Filter files, e.g. login or .css" aria-label="Filter files">
+        <p class="note" id="f-count" style="margin:6px 0"></p>
+        <div class="tree" id="tree"></div>
+        <label>New file path<input id="new-path" placeholder="pages/help.html"></label>
+        <div class="btnrow"><button class="btn" id="new-btn" type="button">Create file</button></div>
+      </div>
+      <div class="card panel" id="ed-panel-wrap">
+        <div id="ed-panel" hidden>
+          <h3 id="ed-path" style="overflow-wrap:anywhere"></h3>
+          <div id="ed-bin" class="note" hidden></div>
+          <div id="ed-box"><textarea class="code" id="ed-text" spellcheck="false" aria-label="File contents"></textarea></div>
+          <label>Commit message (optional)<input id="ed-msg" placeholder="Describe your change"></label>
+          <div class="btnrow"><button class="primary" id="ed-save" type="button">Save to GitHub</button><a class="btn" id="ed-open" target="_blank" rel="noopener" hidden>Open this page</a><button class="btn danger" id="ed-del" type="button">Delete file</button></div>
+        </div>
+        <p class="note" style="margin:0">Choose a file on the left to edit it.</p>
+      </div>
+    </div>
+  </div>
+  <p class="err" id="f-msg" role="status"></p>
+</main>
+<script src="../config/app.config.js"></script>
+<script src="../js/core/util.js"></script>
+<script src="../js/core/crypto.js"></script>
+<script src="../js/core/supabase.js"></script>
+<script src="../js/data/local-db.js"></script>
+<script src="../js/data/cloud-db.js"></script>
+<script src="../js/data/db.js"></script>
+<script src="../js/auth/local-auth.js"></script>
+<script src="../js/auth/cloud-auth.js"></script>
+<script src="../js/auth/auth.js"></script>
+<script src="../js/admin/github.js"></script>
+<script src="../js/admin/admin-common.js"></script>
+<script src="../js/admin/files.js"></script>
+</body>
+</html>

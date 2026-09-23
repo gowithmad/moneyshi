@@ -1,0 +1,29 @@
+/* MoneyShi · auth.css — sign in, create account and password pages */
+.auth{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px calc(24px + env(safe-area-inset-bottom,0px));background:var(--paper)}
+.auth[hidden]{display:none}
+.auth-card{width:min(420px,100%);background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 22px 22px}
+.auth-brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.auth-brand .tagmark{width:58px;height:53px;flex:none}
+.auth-brand b{display:block;font-family:var(--font-d);font-size:32px;letter-spacing:-.02em;line-height:1}
+.auth-brand span{display:block;color:var(--muted);font-size:13.5px;margin-top:5px}
+.authtabs{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-bottom:4px}
+.authtabs button{border:0;background:none;padding:10px;font-weight:600;color:var(--muted)}
+.authtabs button[aria-selected="true"]{background:var(--ink);color:var(--on-ink)}
+.auth-card form[hidden]{display:none}
+.auth-card label{display:block;font-size:13px;color:var(--muted);font-weight:500;margin-top:14px}
+.auth-card input:not([type=checkbox]){display:block;width:100%;margin-top:4px;border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:11px 12px;min-height:46px;font-size:16px;color:var(--ink)}
+.auth-card label.chk{display:flex;gap:8px;align-items:flex-start;color:var(--ink);font-weight:400;font-size:14px}
+.auth-card label.chk input{margin-top:3px;flex:none}
+.pw{position:relative;margin-top:4px}
+.pw input{margin-top:0!important;padding-right:66px!important}
+.pw-t{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--muted);font-weight:600;padding:8px}
+.wide{width:100%;margin-top:16px;min-height:48px;font-size:16px}
+.auth-note{font-size:12.5px;color:var(--muted);margin:14px 2px 0}
+.auth-note[hidden]{display:none}
+.err.info{color:var(--muted)}
+.auth-h{font-size:22px;margin:4px 0 0}
+.auth-links{font-size:14px;margin:16px 2px 0}
+.auth-links a{color:inherit}
+.auth-ok{background:var(--soft);border-radius:12px;padding:12px 14px;font-size:14px;margin-top:12px}
+.code-box{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:22px;letter-spacing:.08em;background:var(--soft);border-radius:12px;padding:14px;text-align:center;margin:10px 0;user-select:all}
+.auth .btnrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}

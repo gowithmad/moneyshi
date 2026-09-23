@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Charts · MoneyShi</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1D7852">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/theme.css"><link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="charts">
+<main class="wrap">
+<div class="grid2">
+      <div class="card">
+        <div class="sec-h"><h2>Money out</h2><p>Debits by category</p></div>
+        <div class="donut"><svg id="pie-out" viewBox="0 0 200 200" role="img" aria-label="Money out by category"></svg><ul class="legend-list" id="leg-out"></ul></div>
+      </div>
+      <div class="card">
+        <div class="sec-h"><h2>Money in</h2><p>Credits by source</p></div>
+        <div class="donut"><svg id="pie-in" viewBox="0 0 200 200" role="img" aria-label="Money in by source"></svg><ul class="legend-list" id="leg-in"></ul></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="sec-h"><h2>Credits and debits by month</h2><p>Tap a bar to see what is behind it</p></div>
+      <div class="scroll"><svg class="mchart" id="bars-months" viewBox="0 0 640 260" role="img" aria-label="Money in and money out by month"></svg></div>
+      <div class="legend"><span><i style="background:var(--in)"></i>Credits (money in)</span><span><i style="background:var(--out)"></i>Debits (money out)</span></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="sec-h"><h2>Day by day</h2><p id="daysub"></p></div>
+      <div class="scroll"><svg class="mchart" id="bars-days" viewBox="0 0 640 230" role="img" aria-label="Money in and money out for each day"></svg></div>
+      <div class="legend"><span><i style="background:var(--in)"></i>Credits</span><span><i style="background:var(--out)"></i>Debits</span></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="sec-h"><h2>Top payees</h2><p>Most money out, by name</p></div>
+      <div id="payees"></div>
+    </div>
+</main>
+<script src="config/app.config.js"></script>
+<script src="js/core/util.js"></script>
+<script src="js/core/crypto.js"></script>
+<script src="js/core/supabase.js"></script>
+<script src="js/data/local-db.js"></script>
+<script src="js/data/cloud-db.js"></script>
+<script src="js/data/db.js"></script>
+<script src="js/auth/local-auth.js"></script>
+<script src="js/auth/cloud-auth.js"></script>
+<script src="js/auth/auth.js"></script>
+<script src="js/app/categories.js"></script>
+<script src="js/app/state.js"></script>
+<script src="js/app/calc.js"></script>
+<script src="js/app/templates.js"></script>
+<script src="js/app/layout.js"></script>
+<script src="js/app/entry-form.js"></script>
+<script src="js/app/detail.js"></script>
+<script src="js/app/backup.js"></script>
+<script src="js/app/boot.js"></script>
+<script src="js/core/pwa.js"></script>
+<script src="js/pages/charts.js"></script>
+</body>
+</html>
